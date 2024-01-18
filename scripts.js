@@ -1,5 +1,6 @@
 const convertButton = document.querySelector(".convert-button")
 const currencySelect = document.querySelector(".currency-select")
+const currencySource = document.querySelector(".currency-source")
 
 function convertValues(){
     const inputCurrencyValue = document.querySelector(".input-currency").value 
@@ -11,6 +12,7 @@ function convertValues(){
     const euroToday = 6.2
     const libraToday = 6.26
     const bitcoinToday = 209996.15
+    const realToday = 1
 
     if(currencySelect.value == "dolar"){
         currencyValueConverted.innerHTML = new Intl.NumberFormat("en-US", {
@@ -49,9 +51,43 @@ function convertValues(){
 
 }
 
+function changeCurrencyOrigen() {
+    const currencyOptionNameOrigem = document.querySelector(".currency")
+    const currencyOptionImgOrigem = document.querySelector(".img-origem")
+
+    if(currencySource.value == "dereal"){
+        currencyOptionNameOrigem.innerHTML = "Real"
+        currencyOptionImgOrigem.src = "./assets/real.png"
+    }
+
+    if(currencySource.value == "dedolar"){
+        currencyOptionNameOrigem.innerHTML = "Dólar americano"
+        currencyOptionImgOrigem.src="./assets/dolar.png"
+    }
+
+    if(currencySource.value == "deeuro"){
+        currencyOptionNameOrigem.innerHTML = "Euro"
+        currencyOptionImgOrigem.src = "./assets/euro.png"
+    }
+    if(currencySource.value == "delibra"){
+        currencyOptionNameOrigem.innerHTML = "Libra"
+        currencyOptionImgOrigem.src = "./assets/libra.png"
+    }
+    if(currencySource.value == "debitcoin"){
+        currencyOptionNameOrigem.innerHTML = "Biticoin"
+        currencyOptionImgOrigem.src = "./assets/bitcoin.png"
+    }
+    convertValues()
+}
+
 function changeCurrency() {
     const currencyOptionName = document.querySelector(".currency-option")
     const currencyOptionImg = document.querySelector(".img-option")
+
+    if(currencySelect.value == "real"){
+        currencyOptionName.innerHTML = "Real"
+        currencyOptionImg.src = "./assets/real.png"
+    }
 
     if(currencySelect.value == "dolar"){
         currencyOptionName.innerHTML = "Dólar americano"
@@ -74,4 +110,5 @@ function changeCurrency() {
 }
 
 currencySelect.addEventListener("change", changeCurrency)
+currencySource.addEventListener("change", changeCurrencyOrigen)
 convertButton.addEventListener("click", convertValues)
