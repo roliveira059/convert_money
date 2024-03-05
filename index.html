@@ -10,54 +10,59 @@
     <title>Convert Money</title>
 </head>
 <body>
-    <img class="logo" src="./assets/logo.gif" alt="logo-convert-money">
-    
-    <main>
-        <label>
-            Converter <b>de</b>
-            <select class="currency-source">
-                <option value="dereal">R$ Real Brasileiro</option>
-                <option value="dedolar">US$ Dólar americano</option>
-                <option value="deeuro">€ Euro</option>
-                <option value="delibra">£ Libra</option>
-                <option value="debitcoin">₿ Bitcoin</option>
-            </select>
-        </label>
-        
-        <label>
-            Converter <b>para</b>
-            <select class="currency-select">
-                <option value="dolar">US$ Dólar americano</option>
-                <option value="euro">€ Euro</option>
-                <option value="libra">£ Libra</option>
-                <option value="bitcoin">₿ Bitcoin</option>
-                <option value="real">R$ Real Brasileiro</option>
-            </select>
-        </label>
+    <!-- <img class="logo" src="./assets/logo.gif" alt="logo-convert-money"> -->
+    <div class="container">
+        <header>
+            <h1>CodClub Convert Money</h1>
+        </header>
 
-        <label>
-            Valor
-            <input class="input-currency" placeholder="R$ 10.000,00">
-        </label>
+        <main>
+            <label>
+                Converter <b>de</b>
+                <select class="currency-source">
+                    <option value="dereal">R$ Real Brasileiro</option>
+                    <option value="dedolar">US$ Dólar americano</option>
+                    <option value="deeuro">€ Euro</option>
+                    <option value="delibra">£ Libra</option>
+                    <option value="debitcoin">₿ Bitcoin</option>
+                </select>
+            </label>
+            
+            <label>
+                Converter <b>para</b>
+                <select class="currency-select">
+                    <option value="dolar">US$ Dólar americano</option>
+                    <option value="euro">€ Euro</option>
+                    <option value="libra">£ Libra</option>
+                    <option value="bitcoin">₿ Bitcoin</option>
+                    <option value="real">R$ Real Brasileiro</option>
+                </select>
+            </label>
 
-        <button class="convert-button">Converter</button>
-        
-        <section>
-            <div class="currency-box">
-                <img src="./assets/real.png" alt="logo-moeda-a-converter" class="img-origem">
-                <p class="currency">Real</p>
-                <p class="currency-value-to-convert">R$ 0,00</p>
-            </div>
+            <label>
+                Valor
+                <input class="input-currency" placeholder="R$ 10.000,00">
+            </label>
 
-            <img class="arrow-img" src="./assets/arrow.png" alt="seta">
+            <button class="convert-button">Converter</button>
+            
+            <section>
+                <div class="currency-box">
+                    <img src="./assets/real.png" alt="logo-moeda-a-converter" class="img-origem">
+                    <p class="currency">Real</p>
+                    <p class="currency-value-to-convert">R$ 0,00</p>
+                </div>
 
-            <div class="currency-box">
-                <img src="./assets/dolar.png" alt="logo-moeda-convertida" class="img-option">
-                <p class="currency-option">Dólar</p>
-                <p class="currency-value">US$ 0.00</p>
-            </div>
-        </section>
-    </main>
+                <img class="arrow-img" src="./assets/arrow.png" alt="seta">
+
+                <div class="currency-box">
+                    <img src="./assets/dolar.png" alt="logo-moeda-convertida" class="img-option">
+                    <p class="currency-option">Dólar</p>
+                    <p class="currency-value">US$ 0.00</p>
+                </div>
+            </section>
+        </main>
+    </div>
 </body>
 <script src="./scripts.js"></script>
 </html>
